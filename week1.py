@@ -28,3 +28,18 @@
 #     if i%n == 0:
 #         result.append(str(i))
 # print(' '.join(result))
+
+###ex4
+# n = int(input())
+# ints = [int(x) for x in input().split()]
+# print(sum(ints))
+
+###ex5
+# text = ''
+# while True:
+#     try:
+#         text += input() + '\n'
+#     except:
+#         break
+
+# print(text.upper())
