@@ -74,3 +74,28 @@
 # while P1 in T:
 #     T = T.replace(P1, P2)
 # print(T)
+
+##ex9
+# import math
+# a, b, c = (float(x) for x in input().split())
+# delta = b*b - 4*a*c
+# if delta < 0:
+#     print('NO SOLUTION')
+# elif delta == 0:
+#     x0 = -b/(2*a)
+#     print("%.2f" %x0)
+# else:
+#     x1 = (-b-math.sqrt(delta))/(2*a)
+#     x2 = (-b+math.sqrt(delta))/(2*a)
+#     print("%.2f %.2f" %(x1, x2))
+
+###ex10
+# try:
+#     yyyy, mm, dd = input().split('-')
+#     y, m, d = int(yyyy), int(mm), int(dd)
+#     if 1<=m<=12 and 1<=d<=31 and len(yyyy)==4 and len(mm)==2 and len(dd)==2:
+#         print(y, m, d)
+#     else:
+#         print('INCORRECT')
+# except:
+#     print('INCORRECT')
