@@ -115,3 +115,51 @@
 #     else:
 #         odd += 1
 # print(odd, even)
+
+
+###ex13
+# try:
+#     hh, mm, ss = input().split(':')
+#     h, m, s = int(hh), int(mm), int(ss)
+#     if 0<=h<=23 and 0<=m<=59 and 0<=s<=59 and len(hh)==2 and len(mm)==2 and len(ss)==2:
+#         print(h*3600 + m*60 + s)
+#     else:
+#         print('INCORRECT')
+# except:
+#     print('INCORRECT')
+
+##ex14
+# def step(a, b, k, x):
+#     if b>0:
+#         if x<a:
+#             return 0
+#         if x>b:
+#             return k*(b-a)
+#         else:
+#             return k*(x-a)
+#     else:
+#         if x<a:
+#             return 0
+#         else:
+#             return k*(x-a)
+# def old(x):
+#     result = 0
+#     result += step(0,   50,  1728, x)
+#     result += step(50,  100, 1786, x)
+#     result += step(100, 200, 2074, x)
+#     result += step(200, 300, 2612, x)
+#     result += step(300, 400, 2919, x)
+#     result += step(400, -1,  3015, x)
+#     return result
+# def new(x):
+#     result = 0
+#     result += step(0,   100, 1728, x)
+#     result += step(100, 200, 2074, x)
+#     result += step(200, 400, 2612, x)
+#     result += step(400, 700, 3111, x)
+#     result += step(700, -1,  3457, x)
+#     return result
+
+# x = int(input())
+# diff = 1.1 * (new(x) - old(x))
+# print("%.2f" %diff)
