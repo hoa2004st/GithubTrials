@@ -20,3 +20,11 @@
 #         print(max(int_list[x-1: y]))
 
 #     text = input()
+
+###ex3
+# n = int(input())
+# result = []
+# for i in range(100, 1000):
+#     if i%n == 0:
+#         result.append(str(i))
+# print(' '.join(result))
