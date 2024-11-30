@@ -99,3 +99,19 @@
 #         print('INCORRECT')
 # except:
 #     print('INCORRECT')
+
+###ex11
+# n = int(input())
+# for i in range(1, n+1):
+#     print(i, i*i)
+
+###ex12
+# odd, even = 0, 0
+# n = int(input())
+# ints = [int(x) for x in input().split()]
+# for i in ints:
+#     if i %2 == 0:
+#         even += 1
+#     else:
+#         odd += 1
+# print(odd, even)
