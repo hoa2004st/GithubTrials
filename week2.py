@@ -88,3 +88,15 @@
 # count = [0]
 # back_track(sudoku_tbl, 0, 0)
 # print(count[0])
+
+###binary generation
+# n = int(input())
+# prev_text = ['0', '1']
+# for i in range(2, n+1):
+#     text = []
+#     for seq in prev_text:
+#         text.append('0' + seq)
+#         text.append('1' + seq)
+#     prev_text = text
+# text.sort()
+# print('\n'.join(text))
