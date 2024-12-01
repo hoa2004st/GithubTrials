@@ -194,3 +194,65 @@
 #     return False
 
 # bfs()
+
+### Family Tree
+
+# class Node:
+#     community = []
+#     def __init__(self, parent, name):
+#         Node.community.append(self)
+#         self.parent = parent #Node Object
+#         self.name = name #String Object
+#         self.child = [] #List of Nodes
+
+#     def insert(child_name, parent_name): #Node, String, String
+#         child, parent = None, None
+#         for person in Node.community:
+#             if person.name == parent_name:
+#                 parent = person
+#             elif person.name == child_name:
+#                 child = person
+#         if parent == None:
+#             parent = Node(None, parent_name)
+#         if child == None:
+#             child = Node(None, child_name)
+#         parent.child.append(child)
+#         child.parent = parent
+#         # print(len(Node.community))
+
+
+#     def des(parent):
+#         result = 0
+#         if len(parent.child) != 0:
+#             for c in parent.child:
+#                 result = result + 1 + c.des()
+#         return result
+#     def gen(parent):
+#         result = 0
+#         if len(parent.child) != 0:
+#             for c in parent.child:
+#                 result = 1 + c.gen()
+#         return result
+
+# while True:
+#     command = input()
+#     if command == '***':
+#         break
+#     temp = command.split()
+#     if len(temp) == 2:
+#         Node.insert(temp[0], temp[1])
+
+# while True: 
+#     command = input()
+#     if command == '***':
+#         break
+#     temp = command.split()
+#     if len(temp) == 2:
+#         if temp[0] == 'descendants':
+#             for p in Node.community:
+#                 if p.name == temp[1]:
+#                     print(p.des())
+#         elif temp[0] == 'generation':
+#             for p in Node.community:
+#                 if p.name == temp[1]:
+#                     print(p.gen())
