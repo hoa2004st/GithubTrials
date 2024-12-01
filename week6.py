@@ -89,3 +89,53 @@
 
 # result = MF(n, capacity, s, t)
 # print(result)
+
+##### Shortest Path
+# import heapq
+# import sys
+# input = sys.stdin.read
+# output = sys.stdout.write
+
+# def dijkstra(n, edges, s, t):
+#     graph = [[] for _ in range(n)]
+#     for u, v, w in edges:
+#         graph[u-1].append((v-1, w))
+
+#     dist = [float('inf')] * n
+#     dist[s-1] = 0
+#     pq = [(0, s-1)]
+
+#     while pq:
+#         d, u = heapq.heappop(pq)
+        
+#         if u == t-1:
+#             return d
+        
+#         if d > dist[u]:
+#             continue
+
+#         for v, w in graph[u]:
+#             if dist[u] + w < dist[v]:
+#                 dist[v] = dist[u] + w
+#                 heapq.heappush(pq, (dist[v], v))
+    
+#     return -1 if dist[t-1] == float('inf') else dist[t-1]
+
+# # Faster input/output
+# def main():
+#     data = input().split()
+#     idx = 0
+#     n, m = int(data[idx]), int(data[idx + 1])
+#     idx += 2
+#     edges = []
+#     for i in range(m):
+#         u, v, w = int(data[idx]), int(data[idx + 1]), int(data[idx + 2])
+#         edges.append((u, v, w))
+#         idx += 3
+#     s, t = int(data[idx]), int(data[idx + 1])
+
+#     result = dijkstra(n, edges, s, t)
+#     output(f"{result}\n")
+
+# if __name__ == "__main__":
+#     main()
