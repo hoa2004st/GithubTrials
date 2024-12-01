@@ -1,5 +1,5 @@
 # GithubTrials
-
+'''mermaid
 ---
 title: Mermaid Git diagram
 ---
@@ -10,3 +10,4 @@ gitGraph
    commit id:"ex3"
    checkout main
    merge week1
+'''
