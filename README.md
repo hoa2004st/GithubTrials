@@ -1,8 +1,9 @@
 # GithubTrials
-'''mermaid
 ---
 title: Mermaid Git diagram
 ---
+'''mermaid
+
 gitGraph
    branch week1
    checkout week1
