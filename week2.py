@@ -100,3 +100,16 @@
 #     prev_text = text
 # text.sort()
 # print('\n'.join(text))
+
+###no 11 bin gen
+# n = int(input())
+# prev_text = ['0', '1']
+# for i in range(2, n+1):
+#     text = []
+#     for seq in prev_text:
+#         text.append('0' + seq)
+#     for seq in prev_text:
+#         if seq[0] == '0':
+#             text.append('1' + seq)
+#     prev_text = text
+# print("\n".join(text))
