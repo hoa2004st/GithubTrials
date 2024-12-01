@@ -106,3 +106,91 @@
 #             queue.pop(0)
 #         else:
 #             print('NULL')
+
+### Water Jug
+# a, b, c = [int(x) for x in input().split()]
+
+# class Action:
+#     def check(self, jug_a, jug_b):
+#         return True
+
+#     def act(self, jug_a, jug_b):
+#         return 0, 0
+
+
+# class full_a(Action):
+#     def check(self, jug_a, jug_b):
+#         return jug_a != a
+
+#     def act(self, jug_a, jug_b):
+#         return a, jug_b
+
+
+# class full_b(Action):
+#     def check(self, jug_a, jug_b):
+#         return jug_b != b
+
+#     def act(self, jug_a, jug_b):
+#         return jug_a, b
+
+
+# class a_to_b(Action):
+#     def check(self, jug_a, jug_b):
+#         return jug_a > 0 and jug_b < b
+
+#     def act(self, jug_a, jug_b):
+#         transfer = min(jug_a, b - jug_b)
+#         return jug_a - transfer, jug_b + transfer
+
+
+# class b_to_a(Action):
+#     def check(self, jug_a, jug_b):
+#         return jug_b > 0 and jug_a < a
+
+#     def act(self, jug_a, jug_b):
+#         transfer = min(jug_b, a - jug_a)
+#         return jug_a + transfer, jug_b - transfer
+
+
+# class empty_a(Action):
+#     def check(self, jug_a, jug_b):
+#         return jug_a != 0
+
+#     def act(self, jug_a, jug_b):
+#         return 0, jug_b
+
+
+# class empty_b(Action):
+#     def check(self, jug_a, jug_b):
+#         return jug_b != 0
+
+#     def act(self, jug_a, jug_b):
+#         return jug_a, 0
+
+
+# actions = [full_a(), a_to_b(), empty_a(), full_b(), b_to_a(), empty_b()]
+
+# def bfs():
+#     queue = [(0, 0, 0)]  # Each element is (jug_a, jug_b, steps)
+#     visited = []
+
+#     while queue:
+#         jug_a, jug_b, steps = queue.pop(0)
+
+#         if jug_a == c or jug_b == c:
+#             print(steps)
+#             return True
+
+#         if (jug_a, jug_b) in visited:
+#             continue
+#         visited.append((jug_a, jug_b))
+
+#         for action in actions:
+#             if action.check(jug_a, jug_b):
+#                 next_a, next_b = action.act(jug_a, jug_b)
+#                 if (next_a, next_b) not in visited:
+#                     queue.append((next_a, next_b, steps + 1))
+
+#     return False
+
+# bfs()
