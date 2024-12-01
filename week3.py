@@ -256,3 +256,105 @@
 #             for p in Node.community:
 #                 if p.name == temp[1]:
 #                     print(p.gen())
+
+### BST
+# class Node:
+#     def __init__(self, key):
+#         self.key = key
+#         self.lchild = None
+#         self.rchild = None
+
+#     def insert(self, val):
+#         if val < self.key:
+#             if self.lchild:
+#                 self.lchild.insert(val)
+#             else:
+#                 self.lchild = Node(val)
+#         elif val > self.key:
+#             if self.rchild:
+#                 self.rchild.insert(val)
+#             else:
+#                 self.rchild = Node(val)
+
+#     def preOrder(self):
+#         if self != None:
+#             print(self.key, end=' ')
+#             if self.lchild:
+#                 self.lchild.preOrder()
+#             if self.rchild:
+#                 self.rchild.preOrder()
+
+# root = None
+# while True:
+#     command = input()
+#     if command == '#':
+#         break
+
+#     temp = command.split()
+#     if len(temp) == 2 and temp[0] == 'insert':
+#         if root == None:
+#             root = Node(int(temp[1]))
+#         else:
+#             root.insert(int(temp[1]))
+
+# root.preOrder()
+### Linked List
+
+# class LinkedList:
+#     def __init__(self, initial_list=None):
+#         self.list = initial_list if initial_list else []
+
+#     def addlast(self, key):
+#         if key not in self.list:
+#             self.list.append(key)
+
+#     def addfirst(self, key):
+#         if key not in self.list:
+#             self.list.insert(0, key)
+
+#     def addafter(self, u, v):
+#         if v in self.list and u not in self.list:
+#             index = self.list.index(v)
+#             self.list.insert(index + 1, u)
+
+#     def addbefore(self, u, v):
+#         if v in self.list and u not in self.list:
+#             index = self.list.index(v)
+#             self.list.insert(index, u)
+
+#     def remove(self, key):
+#         if key in self.list:
+#             self.list.remove(key)
+
+#     def reverse(self):
+#         self.list.reverse()
+
+#     def run(self, commands):
+#         for command in commands:
+#             if command[0] == "addlast":
+#                 self.addlast(int(command[1]))
+#             elif command[0] == "addfirst":
+#                 self.addfirst(int(command[1]))
+#             elif command[0] == "addafter":
+#                 self.addafter(int(command[1]), int(command[2]))
+#             elif command[0] == "addbefore":
+#                 self.addbefore(int(command[1]), int(command[2]))
+#             elif command[0] == "remove":
+#                 self.remove(int(command[1]))
+#             elif command[0] == "reverse":
+#                 self.reverse()
+
+# n = int(input())
+# initial_list = [int(x) for x in input().split()]
+
+# commands = []
+# while True:
+#     command = input().split()
+#     if command[0] == "#":
+#         break
+#     commands.append(command)
+
+# linked_list = LinkedList(initial_list)
+# linked_list.run(commands)
+
+# print(" ".join(map(str, linked_list.list)))
