@@ -1,4 +1,47 @@
 ```mermaid
+---
+title: Processing Pipeline
+---
+flowchart TB
+
+    1[Read Image]
+    2[Gaussian Blur]
+
+    3[Sobel Edge Detection]
+    4[Adaptive Threshold Binarize]
+    5[HoughLinesP]
+    6[HoughLines]
+    7[Remove Diagonal Lines]
+
+    8[Detect Connected Component]
+    9[Mask Connected Components by Area Threshold]
+    10[Retrieve Inner Box]
+    11[Remove Blank Box]
+    12[Visualize Result]
+
+    subgraph A [Preprocess]
+        direction LR
+        1 --> 2
+    end
+    
+    subgraph B [Line Detection]
+        direction LR
+        3 --> 4 --> 5 --> 6 --> 7
+    end
+
+    subgraph C [Box Detection]
+        direction LR
+        8 --> 9 --> 10 -->|inner_box| 11 -->|blank_box_mask| 12
+        9 -->|outer_box| 12
+    end
+
+    A --> B
+    B --> C
+
+```
+
+
+```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'dark' } }%%
 timeline
     title YOLO Evolution Timeline
